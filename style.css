@@ -1,24 +1,47 @@
-body, html {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body, html {margin: 0; padding: 0; overflow-x: hidden; width: auto;}
+body {position: relative; color: #878787;}
 
-.navbar-item:hover {border-bottom: 1px solid deepskyblue; transition: 0.5s;}
+/*Navigation*/
+.navbar {top: 0; position: fixed; overflow: hidden; width: 100%;}
+.navbar-item:hover {border-bottom: 1px solid #ff0000; transition: 0.5s;}
 .navbar-end a:hover {background-color: black !important; transition: 0.5s;}
-#des_bulma:hover {color: deepskyblue !important; transition: 0.5s;}
+.nav_name {font-size: 20px; text-align: center; margin: auto 0; font-family: 'Ubuntu', sans-serif;}
 
-#meine_geschichte:hover {color: #edbf42 !important; text-decoration: underline; transition: 0.5s;}
-#social_media:hover {color: #edbf42 !important; text-decoration: underline; transition: 0.5s;}
+/*Particle.js*/
+#particles-js {background-color: black; height: 500px; width: 100%; z-index: -12; position: absolute;}
 
-#li_schulzeit:hover {background-color: #171717; color: white; transition: 0.5s;} 
-#li_bmw:hover {background-color: #171717; color: white; transition: 0.5s;}
-#li_vfj:hover {background-color: #171717; color: white; transition: 0.5s;}
-#li_lm:hover {background-color: #171717; color: white; transition: 0.5s;}
+/*Home*/
+.ueberschrift {width: 100%; height: 300px; margin: auto; padding-top: 60px;}
+.ueberschrift h1 {font-size: 80px; font-family: 'Ubuntu', sans-serif; text-align: center; z-index: 99;}
+.ueberschrift h2 {font-size: 30px; font-family: 'Ubuntu', sans-serif; text-align: center; z-index: 99;}
 
-#btn_hkh:hover {background-color: #edbf42; color: black !important; transition: 0.5s;}
-#btn_hl:hover {background-color: #edbf42; color: black !important; transition: 0.5s;}
+#sub_home {background-color: black; background-image: linear-gradient(black, black, #171717);}
 
+/*Person*/
+#meine_geschichte {color: white !important; padding: 3px; border-radius: 5px;}
+#social_media {color: white !important; padding: 3px; border-radius: 5px;}
+#meine_geschichte:hover {color: black !important; background-color: white; transition: 0.5s;}
+#social_media:hover {color: black !important; background-color: white; transition: 0.5s;}
+
+/*History*/
+#history {background-image: linear-gradient(to bottom, #171717, black);}
+#tabbedContent ul li a {color: #878787;}
+#li_schulzeit:hover {background-color: white; color: black; transition: 0.5s;}
+#li_bmw:hover {background-color: white; color: black; transition: 0.5s;}
+#li_vfj:hover {background-color: white; color: black; transition: 0.5s;}
+#li_lm:hover {background-color: white; color: black; transition: 0.5s;}
+
+/*Projects*/
+#btn_hkh {background-color: black; color: white !important; margin-top: 15px !important;}
+#btn_hl {background-color: black; color: white !important; margin-top: 15px !important;}
+#btn_hkh:hover {background-color: white; color: black !important; transition: 0.5s;}
+#btn_hl:hover {background-color: white; color: black !important; transition: 0.5s;}
+
+/*Social Media*/
 #hulong_text {text-align: center;}
 #sm_icons {text-align: center;}
 #insta, #discord, #github {display: inline-block; margin-left: auto; margin-right: auto;}
-
 #insta:hover, #discord:hover, #github:hover {transform: scale(1.1); transition: 0.5s;}
 
 #favicon {
@@ -34,10 +57,25 @@ body, html {margin: 0; padding: 0;}
   vertical-align: middle;
 }
 
-#freepik_link {color: #ba9636;}
-#flaticon_link {color: #ba9636;}
-#freepik_link:hover {color: #edbf42; transition: 0.5s;}
-#flaticon_link:hover {color: #edbf42; transition: 0.5s;}
+#bulma {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: #171717;
+  vertical-align: middle;
+}
+
+#freepik_link {color: #ff0000;}
+#flaticon_link {color: #ff0000;}
+#freepik_link:hover {color: white; transition: 0.5s;}
+#flaticon_link:hover {color: white; transition: 0.5s;}
+#bulma_link {color: white;}
+#bulma_link:hover {color: #ff0000; transition: 0.5s;}
 
 footer {
     display: flex;
@@ -47,12 +85,29 @@ footer {
     color: white;
     bottom: 0px;
     width: 100%;
-    height: 50px;
+    height: 80px;
     background-color: #1a1a1a;
     vertical-align: middle;
   }
 
   @media only screen and (max-width: 778px) {
+    .ueberschrift h1 {font-size: 50px;}
+    .ueberschrift h2 {font-size: 20px;}
     #insta, #discord, #github {width: 8%; height: auto;}
     #hulong {width: 12%; height: auto;}
+    .nav_name {font-size: 18px;}
+
+    /*Impressum*/
+    .container2 h1 {font-size: 25px;}
+    .container2 h2 {font-size: 20px;}
+    .container2 p {font-size: 20px;}
   }
+
+  /*Impressum*/
+  #body2 {background-color: black;}
+  .container2 {margin: 20px;}
+  .container2 h1 {color: black; background-color: white; padding: 10px; font-family: 'Poppins', sans-serif;}
+  .container2 h2 {color: white; text-decoration: underline; text-decoration-color: #ff0000; font-family: 'Poppins', sans-serif;}
+  .container2 p {font-family: 'Poppins', sans-serif;}
+  #hinweis {color: white;}
+  #hinweis:hover {color: #ff0000; transition: 0.5s;}
